@@ -28,8 +28,8 @@ for line in fhand:
     if len(words) == 0 or len(words) < 2 or words[0] != 'From': 
         continue
     else:
-        atpos = words[1].find('@')
-        domain = words[1][atpos+1:]
+        atpos = words[1].find('@')               #position of the @ character
+        domain = words[1][atpos+1:]              #stores the characters after the @
         if domain not in dictionary_domains:
             dictionary_domains[domain] = 1       #First entry
         else:
