@@ -36,11 +36,11 @@ for line in fhand:
         else:
             dictionary_addresses[words[1]] += 1      #Additional counts
 
-maximum = 0
+maximum = 0                                          #Initilizes the variable
 for address in dictionary_addresses:
-    if dictionary_addresses[address] > maximum:
-        maximum = dictionary_addresses[address]
-        maximum_address = address
+    if dictionary_addresses[address] > maximum:      #Checks if new maximum
+        maximum = dictionary_addresses[address]      #Updates the maximum if need
+        maximum_address = address                    #Stores the address of maximum
 
 print(maximum_address, maximum)
     
