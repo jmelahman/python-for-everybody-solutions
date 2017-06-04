@@ -1,5 +1,5 @@
 """
-Exercise  11.1: Write a program to look for lines of the form
+Exercise  11.2: Write a program to look for lines of the form
 
 'New Revision: 39771'
 
