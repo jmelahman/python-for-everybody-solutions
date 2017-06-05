@@ -8,7 +8,7 @@ Ocean" and make sure it can handle locations that are not in any country.
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 
-Solution by Jamison Lahman, May 31, 2017
+Solution by Jamison Lahman, June 5, 2017
 """
 
 import urllib.request, urllib.parse, urllib.error
