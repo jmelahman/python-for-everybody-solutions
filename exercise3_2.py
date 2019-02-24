@@ -35,5 +35,5 @@ if hours < 40:
 else:
 	times_over = hours // 40 - 1		#Number of times over 40 hours
 	overtime = hours % 40				#How much overtime is left
-	pay = 40.0 * rate + times_over * rate * 60 + overtime * rate * 1.5
+	pay = 40.0 * rate + times_over * rate * (40 * 1.5) + overtime * rate * 1.5
 print('Pay:',pay)
