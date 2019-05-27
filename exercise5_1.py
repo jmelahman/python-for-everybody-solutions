@@ -18,13 +18,13 @@ by Charles R. Severance
 
 Solution by Jamison Lahman, May 28, 2017
 """
-
 count = 0								#Initializes values
 total = 0
 largest = None
 smallest = None
 
 while True:								#Stays in loop until break
+	number = 0.0
 	input_number = input('Enter a number: ')
 	if input_number == 'done' : break	#Exits the loop
 	try:

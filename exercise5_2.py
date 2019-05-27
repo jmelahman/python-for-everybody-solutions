@@ -15,6 +15,7 @@ largest = None
 smallest = None
 
 while True:								#Stays in loop until break
+	number = 0.0
 	input1 = input('Enter a number: ')
 	if input1 == 'done' : break			#Exits loop
 	try:
