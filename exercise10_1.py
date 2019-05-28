@@ -21,31 +21,32 @@ by Charles R. Severance
 
 Solution by Jamison Lahman, June 1, 2017
 """
-import string
 
-dictionary_addresses = dict()                       #Initializes the dictionary
+
+dictionary_addresses = dict()           # Initialize variables
+lst = list()
+
 fname = input('Enter file name: ')
 try:
     fhand = open(fname)
-except:
+except FileNotFoundError:
     print('File cannot be opened:', fname)
-    exit()
-    
+    quit()
+
 for line in fhand:
     words = line.split()
-    if len(words) == 0 or len(words) < 2 or words[0] != 'From': 
+    if len(words) < 2 or words[0] != 'From':
         continue
     else:
         if words[1] not in dictionary_addresses:
-            dictionary_addresses[words[1]] = 1       #First entry
+            dictionary_addresses[words[1]] = 1       # First entry
         else:
-            dictionary_addresses[words[1]] += 1      #Additional counts
+            dictionary_addresses[words[1]] += 1      # Additional counts
 
-lst = list()                            #Initializes the lst
 for key, val in list(dictionary_addresses.items()):
-    lst.append((val,key))               #fills list with value, key of dict
-    
-lst.sort(reverse=True)                  #sorts by highest value
+    lst.append((val, key))              # Fills list with value, key of dict
 
-for key, val in lst[:1]:                #only displays the largest value
-    print(key,val)
+lst.sort(reverse=True)                  # Sorts by highest value
+
+for key, val in lst[:1]:                # Only displays the largest value
+    print(key, val)

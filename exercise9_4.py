@@ -18,29 +18,33 @@ by Charles R. Severance
 Solution by Jamison Lahman, May 31, 2017
 """
 
-dictionary_addresses = dict()                       #Initializes the dictionary
+
+dictionary_addresses = dict()                   # Initialize variables
+maximum = 0
+maximum_address = ''
+
 fname = input('Enter file name: ')
 try:
     fhand = open(fname)
-except:
+except FileNotFoundError:
     print('File cannot be opened:', fname)
-    exit()
-    
+    quit()
+
 for line in fhand:
     words = line.split()
-    if len(words) == 0 or len(words) < 2 or words[0] != 'From': 
+    if len(words) < 2 or words[0] != 'From':
         continue
-    else:
-        if words[1] not in dictionary_addresses:
-            dictionary_addresses[words[1]] = 1       #First entry
-        else:
-            dictionary_addresses[words[1]] += 1      #Additional counts
 
-maximum = 0                                          #Initilizes the variable
+    if words[1] not in dictionary_addresses:
+        dictionary_addresses[words[1]] = 1      # First entry
+    else:
+        dictionary_addresses[words[1]] += 1     # Additional counts
+
 for address in dictionary_addresses:
-    if dictionary_addresses[address] > maximum:      #Checks if new maximum
-        maximum = dictionary_addresses[address]      #Updates the maximum if need
-        maximum_address = address                    #Stores the address of maximum
+    if dictionary_addresses[address] > maximum:     # Checks if new maximum
+        # Update the maximum if needed
+        maximum = dictionary_addresses[address]
+        # Stors the address of maximum
+        maximum_address = address
 
 print(maximum_address, maximum)
-    

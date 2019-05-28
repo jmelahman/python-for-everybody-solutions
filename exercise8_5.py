@@ -32,11 +32,13 @@ by Charles R. Severance
 Solution by Jamison Lahman, May 31, 2017
 """
 
-fhand = open('mbox-short.txt')
+
+fhand = open('exercise8_2.txt')
 count = 0
 for line in fhand:
-	words = line.split()
-	if len(words) == 0 or len(words) < 2 or words[0] != 'From' : continue
-	print(words[1])
-	count = count + 1
+    words = line.split()
+    if len(words) < 3 or words[0] != 'From':
+        continue
+    print(words[1])
+    count += 1
 print('There were %d lines in the file with From as the first word' % count)

@@ -13,7 +13,11 @@ Solution by Jamison Lahman, May 31, 2017
 
 fhand = open('exercise8_2.txt')
 for line in fhand:
-	words = line.split()
-	if len(words) == 0 or len(words) < 2 : continue
-	if words[0] != 'From' : continue
-	print(words[2])
+    words = line.split()
+
+    # Prefer words's truthiness over len(words) == 0
+    if not words or len(words) < 2:
+        continue
+    if words[0] != 'From':
+        continue
+    print(words[2])

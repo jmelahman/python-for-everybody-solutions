@@ -8,27 +8,28 @@ by Charles R. Severance
 
 Solution by Jamison Lahman, May 28, 2017
 """
+from exercise5_1 import check_for_float
 
-count = 0								#Initializes values
-total = 0
-largest = None
-smallest = None
+# Handles the special case for the first input
+input1 = input('Enter a number: ')
+if input1 == 'done':
+    quit()                                # Exits if no input
 
-while True:								#Stays in loop until break
-	number = 0.0
-	input1 = input('Enter a number: ')
-	if input1 == 'done' : break			#Exits loop
-	try:
-		number = float(input1)			#Only allows input floats
-	except:
-		print('Invalid input')
+number = check_for_float(input1)          # Ensure input is a float
 
-	if largest is None or number > largest:		#Condition for maximum
-		largest = number
-	if smallest is None or number < smallest:	#Condition for Minimum
-		smallest = number
+smallest = number
+largest = number
 
-	count = count + 1					#Counter
-	total = total + number				#Running total
-	
-print(total,count,largest,smallest)
+while True:                               # Stays in loop until break
+    input1 = input('Enter a number: ')
+    if input1 == 'done':
+        break                             # Exits loop
+
+    number = check_for_float(input1)      # Ensure input is a float
+
+    if number > largest:                  # Condition for maximum
+        largest = number
+    if number < smallest:                 # Condition for minimum
+        smallest = number
+
+print(largest, smallest)

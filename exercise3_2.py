@@ -1,6 +1,6 @@
 """
 Exercise 3.2: Rewrite your pay program using try and except so that your
-program handles non-numerica input gracefully by printing a message and
+program handles non-numerical input gracefully by printing a message and
 exiting the program. The folowing shows two executions of the program:
 
 Enter Hours: 20
@@ -15,25 +15,28 @@ by Charles R. Severance
 
 Solution by Jamison Lahman, May 28, 2017
 """
+hours = 0.0                                 # Initialize variables
+rate = 0.0
+pay = 0.0
 
 input_hours = input('Enter Hours: ')
 try:
-	hours = float(input_hours) 			#Only allows input floats
-except:
-	print('Error, please enter numeric input')
-	quit()
+    hours = float(input_hours)              # Only allows input floats
+except ValueError:
+    print('Error, please enter numeric input')
+    quit()
 
-input_rate = input('Enter Rate: ') 		#Only allows input floats
+input_rate = input('Enter Rate: ')
 try:
-	rate = float(input_rate)
-except:
-	print('Error, please enter numeric input')
-	quit()
+    rate = float(input_rate)                # Only allows input floats
+except ValueError:
+    print('Error, please enter numeric input')
+    quit()
 
 if hours < 40:
-	pay = rate * hours					#No overtime calculation
+    pay = rate * hours                      # No overtime calculation
 else:
-	times_over = hours // 40 - 1		#Number of times over 40 hours
-	overtime = hours % 40				#How much overtime is left
-	pay = 40.0 * rate + times_over * rate * (40 * 1.5) + overtime * rate * 1.5
-print('Pay:',pay)
+    overtime = hours - 40                   # Calculate amount of overtime
+    pay = (rate * 40.0) + (1.5 * rate * overtime)
+
+print('Pay: ', pay)

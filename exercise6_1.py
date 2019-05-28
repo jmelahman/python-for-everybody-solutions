@@ -10,8 +10,8 @@ Solution by Jamison Lahman, May 31, 2017
 """
 
 fruit = 'banana'
-index = len(fruit)-1					#compensates for 0 being first index
+index = len(fruit)-1                    # Convert to index
 while index >= 0:
-	letter = fruit[index]				
-	print(letter)
-	index = index - 1					#update index 
+    letter = fruit[index]
+    print(letter)
+    index -= 1                          # Update index

@@ -9,14 +9,18 @@ by Charles R. Severance
 
 Solution by Jamison Lahman, June 4, 2017
 """
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
+
 
 fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
 
 characters = 0
 for line in fhand:
-    words = line.decode()           #\n is considered a character
-                                    #amend to line.decode().rstrip() if need
+    # \n is considered a character
+    # Amend to line.decode().rstrip() if needed
+    words = line.decode()
     characters = characters + len(words)
     if characters < 3000:
         print(line.decode().strip())

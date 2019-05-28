@@ -10,8 +10,8 @@ not in the list, add it to the list.
 When the program completes, sort and print the resulting words in alphabetical
 order.
 
-['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and', 'breaks', 'east', 
-'envious', 'fair', 'grief', 'is', 'kill', 'light', 'moon', 'pale', 'sick', 
+['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and', 'breaks', 'east',
+'envious', 'fair', 'grief', 'is', 'kill', 'light', 'moon', 'pale', 'sick',
 'soft', 'sun', 'the', 'through', 'what', 'window', 'with', 'yonder']
 
 Python for Everybody: Exploring Data Using Python 3
@@ -20,11 +20,12 @@ by Charles R. Severance
 Solution by Jamison Lahman, May 31, 2017
 """
 
-myList = []
+my_list = []
 fhand = open('romeo.txt')
 for line in fhand:
-	words = line.split()				#Splits line into array of words
-	for word in words:
-		if word in myList : continue	#Discards duplicates
-		myList.append(word)				#Updates the list
-print(sorted(myList))					#Alphabetical order
+    words = line.split()                # Splits line into array of words
+    for word in words:
+        if word in my_list:
+            continue                    # Discards duplicates
+        my_list.append(word)            # Updates the list
+print(sorted(my_list))                  # Alphabetical order
