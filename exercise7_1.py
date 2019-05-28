@@ -20,6 +20,9 @@ by Charles R. Severance
 Solution by Jamison Lahman, May 31, 2017
 """
 
+# If in a unix-like environment, you can download mbox-short.txt with the
+# following command,
+# $ curl -O https://www.py4e.com/code3/mbox-short.txt
 fhand = open('mbox-short.txt')
 for line in fhand:                      # Handles one line at a time
     shout = line.rstrip().upper()       # Removes newline and capitalizes

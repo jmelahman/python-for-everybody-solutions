@@ -15,8 +15,7 @@ fhand = open('exercise8_2.txt')
 for line in fhand:
     words = line.split()
 
-    # Prefer words's truthiness over len(words) == 0
-    if not words or len(words) < 2:
+    if len(words) < 3:
         continue
     if words[0] != 'From':
         continue
