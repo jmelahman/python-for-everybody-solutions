@@ -33,7 +33,7 @@ Solution by Jamison Lahman, May 31, 2017
 """
 
 
-fhand = open('exercise8_2.txt')
+fhand = open('mbox-short.txt')
 count = 0
 for line in fhand:
     words = line.split()
