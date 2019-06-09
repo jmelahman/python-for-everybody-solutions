@@ -1,0 +1,10 @@
+
+"editor.rulers": [79, 120]
+
+"workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ff4081"
+}
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
