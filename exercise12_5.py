@@ -22,7 +22,7 @@ header_end_pos = message.find('\r\n\r\n') + 4   # Finds the end of header
 print(message[header_end_pos:],end='')
 while True:                                 # Header in the first data only
     data = my_sock.recv(512)
-    if len(data) <1 :
+    if not data :
         break
     print(data.decode())
 my_sock.close()
