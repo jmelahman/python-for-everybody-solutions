@@ -8,7 +8,7 @@ Ocean" and make sure it can handle locations that are not in any country.
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 
-Solution by Jamison Lahman, June 5, 2017
+Solution by Daniel Lee, January 5, 2019
 """
 
 import urllib.request
@@ -16,16 +16,23 @@ import urllib.parse
 import urllib.error
 import json
 
-# Note that Google is increasingly requiring keys
-# for this API
-serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
+api_key = False
+# If you have a Google Places API key, etner it here
+#api_key = 'xxx'
+
+if api_key is False:
+     api_key = 42
+     serviceurl = 'http://py4e-data.dr-chuck.net/json?'
+else:
+    serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
 
 while True:
     address = input('Enter location: ')
     if not address:
         break
-
-    url = serviceurl + urllib.parse.urlencode({'address': address})
+    parms = dict()
+    parms ={'address': address, 'key': api_key}
+    url = serviceurl + urllib.parse.urlencode(parms)
 
     print('Retrieving', url)
     uh = urllib.request.urlopen(url)
@@ -48,5 +55,8 @@ while True:
         counter += 1
         if js["results"][0]["address_components"][counter]["types"] == ['country', 'political']:
             print(js["results"][0]["address_components"][counter]["short_name"])
+            break
+        elif counter == len(info)-1:
+            print("No country code")
         else:
             continue
