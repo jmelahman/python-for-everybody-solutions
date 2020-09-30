@@ -31,8 +31,8 @@ Solution by Jamison Lahman, June 1, 2017
 """
 
 
-dictionary_hours = dict()               # Initialize variables
-lst = list()
+Mydictionary_hours = dict()               # Initialize variables
+list1 = list()
 
 fname = input('Enter file name: ')
 try:
@@ -41,13 +41,13 @@ except FileNotFoundError:
     print('File cannot be opened:', fname)
     quit()
 
-for line in fhand:
-    words = line.split()
-    if len(words) < 2 or words[0] != 'From':
+for l in fhand:
+    w = l.split()
+    if len(words) < 2 or w[0] != 'From':
         continue
 
-    col_pos = words[5].find(':')
-    hour = words[5][:col_pos]
+    col_pos = w[5].find(':')
+    hour = w[5][:col_pos]
     if hour not in dictionary_hours:
         dictionary_hours[hour] = 1      # First entry
     else:
