@@ -30,7 +30,7 @@ for line in fhand:
         continue
     else:
         atpos = words[1].find('@')               # Position of '@'
-        domain = words[1][atpos+1:]              # Store characters after '@'
+        domain = words[1][atpos + 1:]              # Store characters after '@'
         if domain not in dictionary_domains:
             dictionary_domains[domain] = 1       # First entry
         else:

@@ -18,11 +18,11 @@ my_sock.send(cmd)
 data = my_sock.recv(512)
 message = data.decode()
 header_end_pos = message.find('\r\n\r\n') + 4   # Finds the end of header
-                                            # Adds four to exclude:'\r\n\r\n'
-print(message[header_end_pos:],end='')
+# Adds four to exclude:'\r\n\r\n'
+print(message[header_end_pos:], end='')
 while True:                                 # Header in the first data only
     data = my_sock.recv(512)
-    if not data :
+    if not data:
         break
     print(data.decode())
 my_sock.close()

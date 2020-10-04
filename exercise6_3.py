@@ -8,6 +8,7 @@ by Charles R. Severance
 Solution by Jamison Lahman, May 31, 2017
 """
 
+
 def count(word, letter):
     """"
     Counts the number of times a given letter appears in a word
@@ -21,6 +22,7 @@ def count(word, letter):
         if character == letter:
             counter = counter + 1
     print(counter)
+
 
 input_word = input('Enter the word: ')
 input_letter = input('Enter the letter: ')

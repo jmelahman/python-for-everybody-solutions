@@ -17,7 +17,7 @@ for line in fhand:
     sline = line.decode().strip()
     if count + len(sline) <= 3000:
         print(sline)
-    elif count < 3000 and count + len(sline) >3000:
+    elif count < 3000 and count + len(sline) > 3000:
         numchar = 3000 - count
         print(sline[:numchar - 1])
     count += len(sline)
