@@ -1,3 +1,4 @@
+# pylint: disable=assignment-from-no-return
 """
 Exercise  8.1: Write a function called chop that takes a list and modifies it,
 removing the first and last elements, and returns None.
