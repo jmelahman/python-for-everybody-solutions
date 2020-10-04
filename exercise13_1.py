@@ -21,8 +21,8 @@ api_key = False
 #api_key = 'xxx'
 
 if api_key is False:
-     api_key = 42
-     serviceurl = 'http://py4e-data.dr-chuck.net/json?'
+    api_key = 42
+    serviceurl = 'http://py4e-data.dr-chuck.net/json?'
 else:
     serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
 
@@ -31,7 +31,7 @@ while True:
     if not address:
         break
     parms = dict()
-    parms ={'address': address, 'key': api_key}
+    parms = {'address': address, 'key': api_key}
     url = serviceurl + urllib.parse.urlencode(parms)
 
     print('Retrieving', url)
@@ -41,7 +41,7 @@ while True:
 
     try:
         js = json.loads(data)
-    except:
+    except BaseException:
         js = None
 
     if not js or 'status' not in js or js['status'] != 'OK':
@@ -53,10 +53,12 @@ while True:
     info = js["results"][0]["address_components"]
     for item in info:
         counter += 1
-        if js["results"][0]["address_components"][counter]["types"] == ['country', 'political']:
-            print(js["results"][0]["address_components"][counter]["short_name"])
+        if js["results"][0]["address_components"][counter]["types"] == [
+                'country', 'political']:
+            print(js["results"][0]["address_components"]
+                  [counter]["short_name"])
             break
-        elif counter == len(info)-1:
+        elif counter == len(info) - 1:
             print("No country code")
         else:
             continue

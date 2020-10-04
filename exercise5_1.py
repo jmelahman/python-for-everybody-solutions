@@ -18,6 +18,8 @@ by Charles R. Severance
 
 Solution by Jamison Lahman, May 28, 2017
 """
+
+
 def check_for_float(input1):
     """
     Checks if the type of "input1" is a float and returns the value if so.
@@ -30,6 +32,7 @@ def check_for_float(input1):
     except ValueError:
         print('Error, please enter numeric input')
         quit()
+
 
 # Check module name since check_for_float is being imported in the next
 # exercise. See also, https://www.youtube.com/watch?v=sugvnHA7ElY (video)
