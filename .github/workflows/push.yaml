@@ -16,4 +16,4 @@ jobs:
           pip install pylint==2.6.0
       - name: Lint python
         run: >-
-          pylint --fail-under=8.12 *.py
+          pylint --fail-under=8.18 *.py
