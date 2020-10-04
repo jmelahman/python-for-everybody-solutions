@@ -7,21 +7,18 @@ exercise, simply show the first 3000 characters of the document contents.
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 
-Solution by Jamison Lahman, June 4, 2017
+Solution by Daniel Lee, Dec 29, 2019
 """
 import urllib.request
-import urllib.parse
-import urllib.error
-
-
-fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
-
-characters = 0
+url = input('Enter URL: ')
+fhand = urllib.request.urlopen(url)
+count = 0
 for line in fhand:
-    # \n is considered a character
-    # Amend to line.decode().rstrip() if needed
-    words = line.decode()
-    characters = characters + len(words)
-    if characters < 3000:
-        print(line.decode().strip())
-print(characters)
+    sline = line.decode().strip()
+    if count + len(sline) <= 3000:
+        print(sline)
+    elif count < 3000 and count + len(sline) >3000:
+        numchar = 3000 - count
+        print(sline[:numchar - 1])
+    count += len(sline)
+print(count)
