@@ -2,9 +2,9 @@
 Exercise 13.2: Write a program that will prompt to enter in a url, read the JSON data from that URL using
 urllib and then parse and extract the comment counts from the JSON data,
 compute the sum of the numbers in the file and enter the sum below.
+
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-Solution by jethrozperez, May 9, 2020
 """
 import json
 import ssl
