@@ -1,14 +1,12 @@
 """
 Exercise 13.1: Change either the www.py4e.com/code3/geojson.py or
-www.py4e.com/code3/geoxml.py to print oout the two-character country code from
+www.py4e.com/code3/geoxml.py to print out the two-character country code from
 the retrieved data. Add error checking so you program does not traceback if
 the country code is not there. Once you have it working, search for "Atlantic
 Ocean" and make sure it can handle locations that are not in any country.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Daniel Lee, January 5, 2019
 """
 
 import urllib.request
@@ -16,12 +14,12 @@ import urllib.parse
 import urllib.error
 import json
 
-api_key = False
-# If you have a Google Places API key, etner it here
-#api_key = 'xxx'
+# If you have a Google Places API key, enter it here
+# api_key = 'xxx'
+api_key = ''
 
-if api_key is False:
-    api_key = 42
+if not api_key:
+    api_key = '42'
     serviceurl = 'http://py4e-data.dr-chuck.net/json?'
 else:
     serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
@@ -30,9 +28,8 @@ while True:
     address = input('Enter location: ')
     if not address:
         break
-    parms = dict()
-    parms = {'address': address, 'key': api_key}
-    url = serviceurl + urllib.parse.urlencode(parms)
+    params = {'address': address, 'key': api_key}
+    url = serviceurl + urllib.parse.urlencode(params)
 
     print('Retrieving', url)
     uh = urllib.request.urlopen(url)
@@ -55,10 +52,9 @@ while True:
         counter += 1
         if js["results"][0]["address_components"][counter]["types"] == [
                 'country', 'political']:
-            print(js["results"][0]["address_components"]
-                  [counter]["short_name"])
+            print(js["results"][0]["address_components"][counter]
+                ["short_name"])
             break
-        elif counter == len(info) - 1:
-            print("No country code")
         else:
             continue
+    print("No country code")

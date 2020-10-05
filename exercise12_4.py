@@ -7,8 +7,6 @@ larger web pages.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, June 4, 2017
 """
 import urllib.request
 import urllib.parse

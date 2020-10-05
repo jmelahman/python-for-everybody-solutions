@@ -14,8 +14,6 @@ Enter a file name: mbox-short.txt
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, May 31, 2017
 """
 
 dictionary_days = dict()                       # Initializes the dictionary

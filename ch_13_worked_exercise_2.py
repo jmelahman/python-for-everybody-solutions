@@ -1,16 +1,21 @@
-# Chapter 13 ex 2. Write a program that will prompt to enter in a url, read the JSOPN data from that URL using
-# urllib and then parse and extract the comment counts from the JSON data,
-# compute the sum of the numbers in the file and enter the sum below
+"""
+Exercise 13.2: Write a program that will prompt to enter in a url, read the JSON data from that URL using
+urllib and then parse and extract the comment counts from the JSON data,
+compute the sum of the numbers in the file and enter the sum below.
 
-
+Python for Everybody: Exploring Data Using Python 3
+by Charles R. Severance
+"""
 import json
+import ssl
 import urllib.request
 import urllib.error
 import urllib.parse
-import ssl
+
 
 site = input('Enter URL: ')
-# 'http://py4e-data.dr-chuck.net/comments_42.json'
+# Short circuit to default URL if none is entered
+site = site or 'http://py4e-data.dr-chuck.net/comments_42.json'
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
@@ -21,12 +26,10 @@ file_list = urllib.request.urlopen(site, context=ctx).read()
 
 json_list = json.loads(file_list)
 
-json_clean = json_list['comments']
+comments = json_list['comments']
 
 total = 0
-
-for i in json_clean:
-    x = i['count']
-    total = x + total
+for comment in comments:
+    total += comment['count']
 
 print(total)

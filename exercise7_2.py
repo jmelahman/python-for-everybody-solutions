@@ -19,8 +19,6 @@ Test your file on the mbox.txt and mbox-short.txt files.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, May 31, 2017
 """
 count = 0                                   # Initialize variables
 total = 0

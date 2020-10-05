@@ -20,8 +20,6 @@ NA NA BOO BOO TO YOU - You have been punk'd!
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, May 31, 2017
 """
 
 fname = input('Enter the file name: ')
