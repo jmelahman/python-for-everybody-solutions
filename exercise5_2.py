@@ -5,8 +5,6 @@ instead of the average.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, May 28, 2017
 """
 from exercise5_1 import check_for_float
 

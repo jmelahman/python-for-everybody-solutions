@@ -28,8 +28,6 @@ There were 27 lines in the file with From as the first word
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, May 31, 2017
 """
 
 

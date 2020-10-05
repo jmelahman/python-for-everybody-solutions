@@ -4,8 +4,6 @@ it so that it accepts the string and the letter as arguments.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, May 31, 2017
 """
 
 

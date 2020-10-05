@@ -6,8 +6,6 @@ exercise, simply show the first 3000 characters of the document contents.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Daniel Lee, Dec 29, 2019
 """
 import urllib.request
 url = input('Enter URL: ')

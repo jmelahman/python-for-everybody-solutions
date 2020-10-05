@@ -9,8 +9,6 @@ wikipedia.org/wiki/Letter_frequencies
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, June 1, 2017
 """
 import string
 

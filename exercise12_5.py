@@ -5,8 +5,6 @@ recv is receiving characters (newlines and all), not lines.
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Daniel Lee, Dec 29, 2019
 """
 import socket
 

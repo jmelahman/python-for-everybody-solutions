@@ -18,8 +18,6 @@ zqian@umich.edu 195
 
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
-
-Solution by Jamison Lahman, June 1, 2017
 """
 
 
