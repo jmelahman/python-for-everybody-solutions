@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # pylint: disable=assignment-from-no-return
 """
 Exercise  8.1: Write a function called chop that takes a list and modifies it,

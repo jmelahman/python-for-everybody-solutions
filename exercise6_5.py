@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  6.5: Take the following Python code that stores a string:
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  8.5: Write a program to read through the mail box data and when you
 find the line that starts with "From", you will split the line into words

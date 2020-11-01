@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  11.1: Write a simple program to simulate the operation of the grep
 command on Unix. Ask the user to enter a regular expression and count the

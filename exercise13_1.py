@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise 13.1: Change either the www.py4e.com/code3/geojson.py or
 www.py4e.com/code3/geoxml.py to print out the two-character country code from

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  9.2: Write a program that categorizes each mail message by which day
 of the week the commit was done. To do this, look for lines that start with

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  7.1: Write a program to read through a file and print the contents
 of the file (line by line) all in upper case. Executing the program will look

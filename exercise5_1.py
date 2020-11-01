@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise 5.1: Write a program which repeatedly reads numbers until the user
 enters "done". Once "done" is entered, print out the total, count, and average

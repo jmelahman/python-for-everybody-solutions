@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  10.2: This program counts the distribution of the hour of the day
 for each of the messages. You can pull the hour from the "From" line by finding

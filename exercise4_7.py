@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise 4.7: Rewrite the grade program from previous chapter using a function
 called computegrade that takes a score as its parameter and returns a grade as

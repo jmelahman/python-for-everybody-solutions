@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  9.1: Write a program that reads the words in words.txt and stores
 them as keys in a dictionary. Download a copy of the file from

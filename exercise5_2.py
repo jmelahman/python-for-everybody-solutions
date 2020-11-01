@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise 5.1: Write another program that prompts for a list of numbers as
 above and at the end prints out both the maximum and minimum of the numbers

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  7.3: Sometimes when programmers get vored or want to have a bit of
 fun, they adda harmless Easter Egg to their program. Modify the program that

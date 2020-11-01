@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise 3.2: Rewrite your pay program using try and except so that your
 program handles non-numerical input gracefully by printing a message and

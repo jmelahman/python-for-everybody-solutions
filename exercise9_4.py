@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  9.4: Add ccode to the above program to figure out who has the most
 mesasges in the file.

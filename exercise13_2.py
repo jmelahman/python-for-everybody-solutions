@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise 13.2: Write a program that will prompt to enter in a url, read the JSON data from that URL using
 urllib and then parse and extract the comment counts from the JSON data,

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  8.2: Figure out which line of the above program is still not properly
 guarded. See if you can construct a text file which causes the program to fail

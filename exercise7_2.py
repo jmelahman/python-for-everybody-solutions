@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  7.2: Write a program to prompt for a file name, and then read
 through the file and look for lines of the form:

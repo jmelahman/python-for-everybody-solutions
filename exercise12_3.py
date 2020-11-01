@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  12.3: Use urllib to replicate the previous exercise of (1) retrieving
 the document from a URL, (2) displaying up to 3000 characters, and (3) counting

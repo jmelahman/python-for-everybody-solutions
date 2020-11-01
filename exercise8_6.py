@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  8.6: Rewrite the program that prompts the user for a list of numbers
 and prints out the maximum and minimum of the numbers at the end when the user

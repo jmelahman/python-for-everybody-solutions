@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  8.3: Rewrite the guardian code in the above example without two if
 statements. Instead, use a compound logical expression using the and logical

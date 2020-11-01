@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  10.3: Write a program that reads a file and prints the letters in
 decreasing order of frequency. Your program should convert all the input to

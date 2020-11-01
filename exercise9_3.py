@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Exercise  9.3: Write a program to read through a mail log, build a histogram
 using a dictionary to count how many messages have come from each email
