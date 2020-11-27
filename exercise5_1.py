@@ -19,7 +19,7 @@ by Charles R. Severance
 """
 
 
-def check_for_float(input1):
+def check_for_float(input1, exit = True):
     """
     Checks if the type of "input1" is a float and returns the value if so.
     Input:    input1 -- variable to check
@@ -28,9 +28,11 @@ def check_for_float(input1):
     try:
         val = float(input1)                   # Only allows input floats
         return val
-    except ValueError:
+    except (ValueError, TypeError):
         print('Error, please enter numeric input')
-        quit()
+        if exit:
+            quit()
+        return False
 
 
 # Check module name since check_for_float is being imported in the next
@@ -46,7 +48,9 @@ if __name__ == "__main__":
         if input_number == 'done':
             break                             # Exits the while loop
 
-        number = check_for_float(input_number)
+        number = check_for_float(input_number, False)
+        if not number:
+            continue
 
         count += 1                            # Counter
         total = total + number                # Running total
