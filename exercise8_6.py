@@ -35,5 +35,6 @@ while True:
 
     my_list.append(input_number)
 
-print('Maximum: ', max(my_list))
-print('Minimum: ', min(my_list))
+if my_list:
+    print('Maximum: ', max(my_list) or None)
+    print('Minimum: ', min(my_list) or None)
