@@ -42,7 +42,7 @@ except FileNotFoundError:
 
 for line in fhand:
     words = line.split()
-    if len(words) < 2 or words[0] != 'From':
+    if len(words) < 5 or words[0] != 'From':
         continue
 
     col_pos = words[5].find(':')
