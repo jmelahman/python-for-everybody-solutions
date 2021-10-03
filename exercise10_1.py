@@ -47,5 +47,5 @@ for key, val in list(dictionary_addresses.items()):
 
 lst.sort(reverse=True)                  # Sorts by highest value
 
-for key, val in lst[:1]:                # Only displays the largest value
-    print(key, val)
+for count, email in lst[:1]:            # Only displays the largest value
+    print(email, count)
