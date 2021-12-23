@@ -21,6 +21,7 @@ import re
 
 
 rev = []
+rev_ave = 0
 
 fname = input('Enter file: ')
 try:
@@ -41,6 +42,4 @@ rev_sum = sum(rev)
 count = float(len(rev))
 if count:
     rev_ave = rev_sum / count
-    print(rev_ave)
-else:
-    print(0)
+print(rev_ave)
