@@ -7,11 +7,27 @@ Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 """
 
-import random
+def gil():
+    import random
 
-for i in range(10):
-    x = random.random()
-    print(x)
+    print('Guess number from 1 to 10')
+
+    guess = int(input('My number guess: '))
+#for i in range(10):
+    x = random.randint(1, 10)
+    if guess == x :
+        print(x, ',You Right!!')
+    else:
+        print('Number is',x,'.You wrong')
+
+gil()
+while True:
+    play = input('Still wanna play ? (y/n) ')
+    if play == 'Y' or play == 'y':
+        gil()
+    else:
+        quit()
+
 
 """
 Run 1:
