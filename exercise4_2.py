@@ -10,17 +10,28 @@ Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 """
 
+input_word = input('How much you wanna replay word: ')
+
+try:
+    input = int(input_word)              # Only allows input floats
+except ValueError:
+    print('Error, please enter numeric input')
+    quit()
+
+def repeat_lyrics():
+    print_lyrics() 
+    #print_lyrics()
+    
+
+def print_lyrics():
+    for x in range(input):
+        x = print("I'm a lumberjack, and I'm okay.")
+        x = print('I sleep all night and I work all day.')
+
+
 repeat_lyrics()
 
 
-def repeat_lyrics():
-    print_lyrics()
-    print_lyrics()
-
-
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print('I sleep all night and I work all day.')
 
 
 """
