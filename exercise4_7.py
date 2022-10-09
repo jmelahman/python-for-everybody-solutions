@@ -41,28 +41,36 @@ def computegrade(tmp_score):
     Input:    score -- score (must be between 0.0 and 1.0)
     Output:    returns a grade as a string.
     """
-    if 0.0 <= tmp_score <= 1.0:
-        if tmp_score >= 0.9:
+    if 0.0 <= tmp_score <= 100.0:
+        if tmp_score >= 90.0:
             return 'A'
-        if tmp_score >= 0.8:
+        if tmp_score >= 80.0:
             return 'B'
-        if tmp_score >= 0.7:
+        if tmp_score >= 70.0:
             return 'C'
-        if tmp_score >= 0.6:
+        if tmp_score >= 60.0:
             return 'D'
-        return 'F'
+        return 'F. FAIL!!'
     # Case 'score' is not on the interval
-    return 'Bad score'
+    return 'Your Input Score Outside Our Range'
 
 
-input_score = input('Enter score: ')
-score = 0.0
+def grade():
+    input_score = input('Enter score: ')
+    score = 0.0
 
-try:
-    score = float(input_score)             # Only allows input floats
-except ValueError:
-    print('Bad score')
-    quit()
+    try:
+        score = float(input_score)             # Only allows input floats
+    except ValueError:
+        print('Just Input Numeric Number')
+        quit()
 
-grade = computegrade(score)
-print(grade)
+    grade = computegrade(score)
+    print(grade)
+
+while True:
+    again = input('Wanna Grade?(y/n) ')
+    if again == 'Y' or again == 'y':
+        grade()    
+    else:
+        quit()
