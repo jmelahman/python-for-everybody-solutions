@@ -42,6 +42,7 @@ if __name__ == "__main__":
     count = 0                                 # Initializes values
     total = 0.0
     average = 0.0
+    start = []
 
     while True:                               # Stays in loop until break
         input_number = input('Enter a number: ')
@@ -54,9 +55,13 @@ if __name__ == "__main__":
 
         count += 1                            # Counter
         total = total + number                # Running total
+        start.append(number)
+        minimum = min(start)
+        maximum = max(start)
 
     # Ensures count is not 0 which would cause division error
     if count:
         average = total / count               # Computes the average
-
-    print(total, count, average)
+    
+    
+    print('Total is',total,', Number of Input is',count,', Average:',average, ', Minimum:',minimum, ', Maximum:',maximum)
