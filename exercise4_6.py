@@ -43,11 +43,22 @@ def check_for_float(input1):
         quit()
 
 
-input_hours = input('Enter Hours: ')
-hours = check_for_float(input_hours)
+def process():
+    input_name = input('Input name of employer: ')
+    input_hours = input('Enter Hours: ')
+    hours = check_for_float(input_hours)
 
-input_rate = input('Enter Rate: ')
-rate = check_for_float(input_rate)
+    input_rate = input('Enter Rate: ')
+    rate = check_for_float(input_rate)
 
-pay = computepay(hours, rate)
-print('Pay: ', pay)
+    pay = computepay(hours, rate)
+    print('Name of Employee:', input_name,'and The Pay is', pay)
+
+process()
+
+while True:
+    again = input('Still Wanna Count? (y/n) ')
+    if again == 'Y' or again == 'y':
+        process()
+    else:
+        quit()
