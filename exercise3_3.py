@@ -31,13 +31,16 @@ by Charles R. Severance
 """
 score = 0.0                                # Initialize variables
 grade = ""
+name = input('Input name here: ')
 
-input1 = input('Enter score: ')
+input1 = input('Enter score from 0 - 100: ')
 try:
     score = float(input1)                  # Only allows input floats
 except ValueError:
-    print('Bad score')
+    print('Input Number From 0 - 100')
     quit()
+
+score = score / 100
 
 if 0.0 <= score <= 1.0:                    # Scores must be between 0.0 and 1.0
     if score >= 0.9:
@@ -49,8 +52,8 @@ if 0.0 <= score <= 1.0:                    # Scores must be between 0.0 and 1.0
     elif score >= 0.6:
         grade = 'D'
     else:
-        grade = 'F'
+        grade = 'F. Fail'
 else:
-    grade = 'Bad score'
+    grade = 'We are not accept number above or below range'
 
-print(grade)
+print(name, "get score", grade)
