@@ -24,6 +24,8 @@ by Charles R. Severance
 """
 
 fname = input('Enter the file name: ')
+word = input('What word from line you wanna count? ') #input user for word you wanna search
+
 try:
     if fname == 'na na boo boo':
         print('NA NA BOO BOO TO YOU - You have been punk\'d!')
@@ -34,8 +36,15 @@ except FileNotFoundError:
     exit()
 
 count = 0
+countw = 0
 for line in fhand:
-    if line.startswith('Subject:'):
+    if line.startswith(word):
         count += 1
+    if word in line:
+        countw += 1 
+#add condition when count word in front of line and count word in line same or not
+if count == countw:
+    print('Same Count')
 
-print('There were', count, 'subject lines in', fname)
+print('There were', count, 'lines start with',word,'in', fname) #print for count at first of line
+print('There were', countw, word,'words in lines at', fname) #print for count word in line
