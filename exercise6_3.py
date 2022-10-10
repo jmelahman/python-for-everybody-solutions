@@ -20,6 +20,10 @@ def count(word, letter):
     for character in word:
         if character == letter:
             counter = counter + 1
+        #exception for space   
+        if character == ' ':
+            print('Word had space. We dont wanna count')
+            quit()  
     print(counter)
 
 
