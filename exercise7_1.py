@@ -23,6 +23,15 @@ by Charles R. Severance
 # following command,
 # $ curl -O https://www.py4e.com/code3/mbox-short.txt
 fhand = open('mbox-short.txt')
+print('Input line of words you dont wanna shout!!We will erase that line from result') 
+exception = input() # made user input
+count = 0
+
 for line in fhand:                      # Handles one line at a time
-    shout = line.rstrip().upper()       # Removes newline and capitalizes
-    print(shout)
+    if exception not in line:               # erase input user word from our new capitalize result     
+        #count += 1   
+        shout = line.rstrip().upper()       # Handles one line at a time
+        print(shout)                        # Removes newline and capitalizes
+    else:
+        count += 1
+print(count,'LINE BEING ERASED CAUSE HAD WORD',exception)
