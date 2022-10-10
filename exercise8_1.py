@@ -34,9 +34,15 @@ def middle(lst):
     del new[-1]                         # Deletes the last element
     return new
 
+scale1 = int(input('Input range for list: ')) #user input
 
-my_list = [1, 2, 3, 4]
-my_list2 = [1, 2, 3, 4]
+
+my_list = []
+my_list2 = []
+
+for i in range(1,scale1+1): # add number to list
+    my_list.append(i)
+    my_list2.append(i)
 
 chop_list = chop(my_list)
 print(my_list)                          # Should be [2,3]
