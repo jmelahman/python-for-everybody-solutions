@@ -8,7 +8,9 @@ Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 """
 
-fruit = 'banana'
+fruit = input('Insert your word here: ').lower() #user input for word
+print('There are',len(fruit), 'letter') #print length of fruit list
+
 index = len(fruit) - 1                    # Convert to index
 while index >= 0:
     letter = fruit[index]
