@@ -31,4 +31,4 @@ while True:                               # Stays in loop until break
     if number < smallest:                 # Condition for minimum
         smallest = number
 
-print(largest, smallest)
+print('Large Number is',largest, 'And Smallest Number is',smallest)
