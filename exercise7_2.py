@@ -23,6 +23,8 @@ by Charles R. Severance
 """
 count = 0                                   # Initialize variables
 total = 0
+count_r = 0
+total_r = 0
 
 fname = input('Enter the file name: ')
 try:
@@ -38,6 +40,16 @@ for line in fhand:
         number = line[colpos + 1:].strip()    # Removes all text except number
         SPAM_C = float(number)
         total = total + SPAM_C
+        
+        average = total / count
+        
+     if line.startswith('New Revision: '):
+        count_r = count_r + 1
+        colpos = line.find(':')
+        number = line[colpos + 1:].strip()    # Removes all text except number
+        New_R = float(number)
+        total_r = total_r + New_R
 
-average = total / count
+
 print('Average spam confidence: ', average)
+print('Count of Revision: ', count_r,'times.', 'Total words being revision is', "{:0,.1f}".format(total_r))
