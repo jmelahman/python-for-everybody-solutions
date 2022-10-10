@@ -11,7 +11,12 @@ into a floating number.
 Python for Everybody: Exploring Data Using Python 3
 by Charles R. Severance
 """
-string = 'X-DSPAM-Confidence: 0.8475'
+string = input('Input Your Variable. Made Sure add : sign in your variable ') #words from user input
+
+#exception if we dont use : sign
+if ':' not in string:
+    print('You dont insert : sign')
+    quit()
 
 col_pos = string.find(':')                  # Finds the colon character
 number = string[col_pos + 1:]                 # Extracts portion after colon
