@@ -33,11 +33,12 @@ by Charles R. Severance
 
 
 fhand = open('mbox-short.txt')
+first_word = input('Insert first word in line you wanna count ')
 count = 0
 for line in fhand:
     words = line.split()
-    if len(words) < 3 or words[0] != 'From':
+    if len(words) < 3 or words[0] != first_word:
         continue
     print(words[1])
     count += 1
-print('There were %d lines in the file with From as the first word' % count)
+print('There were',count,'lines in the file with',first_word,'as the first word')
