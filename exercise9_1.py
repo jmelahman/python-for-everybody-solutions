@@ -11,18 +11,25 @@ by Charles R. Severance
 """
 
 
+search = input('Input words you wanna search ')
 count = 0
+countd = 0 
 dictionary_words = dict()                   # Initializes the dictionary
 fhand = open('words.txt')
 for line in fhand:
     words = line.split()
     for word in words:
         count += 1
-        if word in dictionary_words:
-            continue                        # Discards duplicates
+        if word in dictionary_words:        # Discards duplicates
+            continue  
+        countd += 1  
+        
         dictionary_words[word] = count      # Value is first time word appears
+        
+print(countd,'not same words from', count)
 
-if 'Python' in dictionary_words:
-    print('True')
+if search in dictionary_words:
+    print('True. You got the word',search)
 else:
-    print('False')
+    print('False. There are not word like that')
+
