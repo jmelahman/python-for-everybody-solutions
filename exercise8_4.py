@@ -20,11 +20,21 @@ by Charles R. Severance
 """
 
 my_list = []
+count = 0
+counts = 0
 fhand = open('romeo.txt')
 for line in fhand:
-    words = line.split()                # Splits line into array of words
+    letter = line.capitalize()          #made all of word capitalize, so still can be sorted with alphabet
+    words = letter.split()              # Splits line into array of words
+    count += 1
     for word in words:
         if word in my_list:
             continue                    # Discards duplicates
+        counts += 1
         my_list.append(word)            # Updates the list
+
+countnotsame = count - counts
+        
 print(sorted(my_list))                  # Alphabetical order
+print('Word in list is',count,'but we had',countnotsame,'same words')
+print('So, words in list just',counts)
