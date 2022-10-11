@@ -24,7 +24,7 @@ my_list = []                        # Initialize array
 while True:
     number = 0.0
     input_number = input('Enter a number: ')
-    if input_number == 'done':
+    if input_number == 'done' or input_number == ' ': #add space for process:
         break
 
     try:
