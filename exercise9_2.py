@@ -18,6 +18,9 @@ by Charles R. Severance
 """
 
 dictionary_days = dict()                       # Initializes the dictionary
+dictionary_days1 = dict()
+dictionary_days2 = dict()
+dictionary_days3 = dict()
 fname = input('Enter a file name: ')
 try:
     fhand = open(fname)
@@ -34,5 +37,20 @@ for line in fhand:
             dictionary_days[words[2]] = 1       # First entry
         else:
             dictionary_days[words[2]] += 1      # Additional counts
+        if words[1] not in dictionary_days1:
+            dictionary_days1[words[1]] = 1
+        else:
+            dictionary_days1[words[1]] += 1 
+        if words[3] not in dictionary_days2:
+            dictionary_days2[words[3]] = 1
+        else:
+            dictionary_days2[words[3]] += 1 
+        if words[6] not in dictionary_days3:
+            dictionary_days3[words[6]] = 1
+        else:
+            dictionary_days3[words[6]] += 1 
 
-print(dictionary_days)
+print('Frequency of each day:',dictionary_days)
+print('Frequency of email get send:',dictionary_days1)
+print('Frequency of month:',dictionary_days2)
+print('Frequency of year:',dictionary_days3)
