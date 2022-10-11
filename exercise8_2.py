@@ -10,12 +10,18 @@ by Charles R. Severance
 """
 
 
-fhand = open('exercise8_2.txt')
+count = 0 #made variable
+user = input('Enter name of file, is exercise8_2.txt or mbox-short.txt ')
+fhand = open(user)
 for line in fhand:
     words = line.split()
 
-    if len(words) < 3:
+    if len(words) < 3: #exception for word with length < 3
         continue
-    if words[0] != 'From':
+        
+    if words[0] != 'From': #exception for word startswith not from word
         continue
-    print(words[2])
+    print(words[1]) #print email
+    count += 1 #add for every word included
+    
+print('Word is',count,'times') #count how many times word count
