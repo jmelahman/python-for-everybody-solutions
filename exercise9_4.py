@@ -19,7 +19,9 @@ by Charles R. Severance
 
 
 dictionary_addresses = dict()                   # Initialize variables
+minimum = 0
 maximum = 0
+maximum_address = ''
 maximum_address = ''
 
 fname = input('Enter file name: ')
@@ -39,11 +41,17 @@ for line in fhand:
     else:
         dictionary_addresses[words[1]] += 1     # Additional counts
 
+print('Email Address With Minimum Count Is')
 for address in dictionary_addresses:
     if dictionary_addresses[address] > maximum:     # Checks if new maximum
         # Update the maximum if needed
         maximum = dictionary_addresses[address]
         # Stors the address of maximum
         maximum_address = address
+     minimum = dictionary_addresses[address]       
+    minimum_address = address
+    if minimum == 1: 
+        print(address, minimum)
 
+print('Email Address With Maximal Count Is')
 print(maximum_address, maximum)
