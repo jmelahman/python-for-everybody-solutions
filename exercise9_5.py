@@ -15,6 +15,8 @@ by Charles R. Severance
 """
 
 dictionary_domains = dict()                       # Initialize variables
+maximum = 0
+maximum_domain = ''
 
 fname = input('Enter file name: ')
 try:
@@ -36,3 +38,13 @@ for line in fhand:
             dictionary_domains[domain] += 1      # Additional counts
 
 print(dictionary_domains)
+
+#made code for maximum count at domain
+for address in dictionary_domains:
+    if dictionary_domains[address] > maximum:     # Checks if new maximum
+        # Update the maximum if needed
+        maximum = dictionary_domains[address]
+        # Stors the address of maximum
+        maximum_address = address
+
+print(maximum_address, maximum)
