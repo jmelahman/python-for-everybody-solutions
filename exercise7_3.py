@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Exercise  7.3: Sometimes when programmers get Bored or want to have a bit of
+Exercise 7.3: Sometimes when programmers get bored or want to have a bit of
 fun, they adda harmless Easter Egg to their program. Modify the program that
 prompts the user for a file name so that is prints a funny message when
 the user types in the exact file name "na na boo boo". The program should
