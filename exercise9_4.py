@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Exercise  9.4: Add ccode to the above program to figure out who has the most
-mesasges in the file.
+Exercise  9.4: Add code to the above program to figure out who has the most
+messages in the file.
 
 After all the data has been read and the dictionary has been created, look
 through the dictionary using a maximum loop (see Section [maximumloop]) to
