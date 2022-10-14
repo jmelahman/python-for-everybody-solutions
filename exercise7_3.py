@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Exercise  7.3: Sometimes when programmers get vored or want to have a bit of
+Exercise  7.3: Sometimes when programmers get Bored or want to have a bit of
 fun, they adda harmless Easter Egg to their program. Modify the program that
-prompts the user for a file name so that is prints a funny message when the
-the user types in the exact file name "na na boo boo". the program should
+prompts the user for a file name so that is prints a funny message when
+the user types in the exact file name "na na boo boo". The program should
 behave normally for all other files which exist and don't exit. Here is a
 sample execution of the program:
 
@@ -12,8 +12,8 @@ Enter the file name: mbox.txt
 There were 1797 subject lines in mbox.txt
 
 python egg.py
-Enter the file name: missing.tyxt
-File cannot be opened: missing.tyxt
+Enter the file name: missing.txt
+File cannot be opened: missing.txt
 
 python egg.py
 Enter the file name: na na boo boo

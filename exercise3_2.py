@@ -2,7 +2,7 @@
 """
 Exercise 3.2: Rewrite your pay program using try and except so that your
 program handles non-numerical input gracefully by printing a message and
-exiting the program. The folowing shows two executions of the program:
+exiting the program. The following shows two executions of the program:
 
 Enter Hours: 20
 Enter Rate : nine
