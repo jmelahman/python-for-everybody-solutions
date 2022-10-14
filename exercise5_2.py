@@ -31,4 +31,5 @@ while True:                               # Stays in loop until break
     if number < smallest:                 # Condition for minimum
         smallest = number
 
-print('Large Number is',largest, 'And Smallest Number is',smallest)
+print('Largest:', largest)
+print('Smallest:', smallest)
