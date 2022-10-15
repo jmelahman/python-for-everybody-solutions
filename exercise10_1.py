@@ -45,7 +45,20 @@ for line in fhand:
 for key, val in list(dictionary_addresses.items()):
     lst.append((val, key))              # Fills list with value, key of dict
 
-lst.sort(reverse=True)                  # Sorts by highest value
+count = input('Wanna know highest or lowest? ').lower()
 
-for count, email in lst[:1]:            # Only displays the largest value
-    print(email, count)
+if count == 'highest':
+    lst.sort(reverse=True)                  # Sorts by highest value
+
+    for count, email in lst[:1]:            # Only displays the largest value
+        print(email, count)
+        
+if count == 'lowest': 
+    lst.sort()
+    for count, email in lst:
+        if count == 1:
+            print(email, count)
+
+if count != 'highest' or count != 'lowest':
+    print('Just accept lowest or highest')
+    quit()
