@@ -17,12 +17,12 @@ char_limit = 3000
 for line in fhand:
     # \n is considered a character; this follow commands like wc.
     # Change the following to line.decode().rstrip('\n') if desired
-    line = line.decode()
+    line = line.decode().strip()   #if we do not put strip here it will count "/n" as a character too. 
     next_count = chars + len(line)
     if next_count <= char_limit:
-        print(line.rstrip('\n'))
+        print(line)              #as we put strip above  so we will not mention here.
     elif chars < char_limit:
-        char_remain = char_limit - chars - 1
+        char_remain = char_limit - chars - 1 #it might be true but we can write it a in a one short step which is if len(line)==0: break
         print(line[:char_remain])
     chars = next_count
 print(chars)
