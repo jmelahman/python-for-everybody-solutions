@@ -12,7 +12,7 @@ by Charles R. Severance
 
 
 count = 0
-dictionary_words = dict()                   # Initializes the dictionary
+dictionary_words = {}                   # Initializes the dictionary
 fhand = open('words.txt')
 for line in fhand:
     words = line.split()
